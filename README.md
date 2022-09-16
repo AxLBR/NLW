@@ -1,4 +1,7 @@
 # User Profile Front
+
+![preview](./.github/preview.JPG)
+
 Projeto desenvolvido para estudo, com intuíto o treinamento de estilização para front-end.
 
 # Tecnologias utilizadas:
