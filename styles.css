@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    gap: 16px;
-}
+/* CLASS */
 
 .games-list img {
     border-radius: 8px;
     width: 90px;
+    height: 120px;
 }
 
 .channel-list img {
@@ -21,41 +18,71 @@ ul {
     border: 1px solid #443E54
 }
 
+.series-list img {
+    border-radius: 8px;
+    width: 90px;
+    height: 130px;
+}
+
+/* TAGS */
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body {
     background-image: url(./assets/bg.jpg);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: #121214;
+    background-color: #000203;
 }
 
-body * {
+body *, header * {
     font-family: 'Inter', sans-serif;
     line-height: 160%;
 }
 
 header {
     padding-top: 32px;
-    height: calc(120px + 32px);
+    height: calc(120px + 45px);
 }
 
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #38C7E7 0%, #336E81 100%);
     border-radius: 50%;
     display: flex;
     padding: 4px;
     transition: transform .3s;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.55));
 }
 
-header div:hover {
+header div:hover{
     transform: scale(1.1);
 }
 
 header div img {
     width: 100%;
     border-radius: 50%;
+}
+
+header p {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+header p span {
+    font-size: 17px;
+    font-weight: 100;
 }
 
 main {
@@ -68,13 +95,13 @@ main {
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #38C7E7 0%, #336E81 100%);
     padding-top: 4px;
     border-radius: 10px;
 }
 
 section div {
-    background-color: #2A2634;
+    background-color: #222543;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
@@ -94,18 +121,27 @@ section ul {
     flex-wrap: wrap;
 }
 
+section:first-child {
+    margin-top: 10px;
+}
+
 section ul li {
     transition: transform .3s;
 }
+
 
 section ul li:hover {
     transform: scale(1.1);
 }
 
-/* animation */
+/* ANIMATIONS */
 
 header div {
     animation: fromTop .7s .2s backwards;
+}
+
+header p {
+    animation: fromTop .7s .4s backwards;
 }
 
 main section {
@@ -124,6 +160,10 @@ main section:nth-child(3) {
     animation-delay: .8s;
 }
 
+main section:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
 @keyframes fromTop {
     from {
         opacity: 0;
@@ -131,18 +171,6 @@ main section:nth-child(3) {
     }
 
     to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to{
         opacity: 1;
         transform: translateY(0);
     }
