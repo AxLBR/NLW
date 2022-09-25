@@ -12,6 +12,11 @@
     height: 120px;
 }
 
+.channel-list {
+    text-align: center;
+    font-size: 12px;
+}
+
 .channel-list img {
     border-radius: 50%;
     width: 70px;
@@ -125,12 +130,19 @@ section:first-child {
     margin-top: 10px;
 }
 
-section ul li {
+section ul li img {
     transition: transform .3s;
 }
 
+section ul li img:hover {
+    transform: scale(1.1);
+}
 
-section ul li:hover {
+.networks-list li{
+    transition: transform .3s;
+}
+
+.networks-list li:hover{
     transform: scale(1.1);
 }
 
